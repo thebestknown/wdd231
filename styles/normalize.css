@@ -197,6 +197,8 @@
   [type="reset"],
   [type="submit"] {
     -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button; 
   }
   
   /**
@@ -288,8 +290,10 @@
    */
   
   [type="search"] {
-    -webkit-appearance: textfield; /* 1 */
-    outline-offset: -2px; /* 2 */
+    -webkit-appearance: textfield; 
+    -moz-appearance: textfield;
+    appearance: textfield;
+    outline-offset: -2px;
   }
   
   /**

@@ -1,0 +1,80 @@
+@media (min-width: 768px) {
+    
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+
+    .header-content {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    header img {
+        width: 100px;
+    }
+
+    header span {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    nav ul li a {
+        padding: 0.75rem 1.5rem;
+        font-size: 1.2rem;
+    }
+
+    .hamburger {
+        display: none; 
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .course-work {
+        grid-column: 1;
+    }
+
+    .location {
+        grid-column: 2;
+    }
+
+    .certificate {
+        grid-column: span 2;
+        text-align: center;
+    }
+
+    .courses {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    footer {
+        text-align: center;
+        padding: 1.5rem;
+        background-color: #002244;
+        color: white;
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+    
+    footer img {
+        width: 80px; 
+        height: auto;
+    }
+}
+
+
+
