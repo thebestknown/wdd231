@@ -6,14 +6,20 @@
     <title>Course Home Page</title>
     <meta name="description" content="Course Home Page - WDD 231">
     <meta name="author" content="Jeimy Espinoza">
-    <link rel="stylesheet" href="">
-    <script src="" defer></script>
-
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
 </head>
 <body>
+
     <header>
-        <img src="images/profile.webp" alt="Jeimy Espinoza">
-        <span>Jeimy Espinoza</span>
+        <div class="header-content">
+            <img src="images/profile.jpg" alt="Jeimy Espinoza">
+            <span>Jeimy Espinoza</span>
+        </div>
         <nav>
             <ul>
                 <li><a href="#" class="active">Home</a></li>
@@ -21,11 +27,13 @@
                 <li><a href="#">GitHub Profile</a></li>
                 <li><a href="#">LinkedIn</a></li>
             </ul>
-        </nav>        
+        </nav>
     </header>
+
     <main>
         <h1>Home</h1>
-        <section>
+
+        <section class="course-work">
             <h2>Course Work</h2>
             <ul>
                 <li></li>
@@ -33,28 +41,36 @@
                 <li></li>
             </ul>
         </section>
-    
-        <section>
+
+        <section class="location">
             <h2>Quevedo, Ecuador</h2>
             <img src="images/ecuador.jpg" alt="Cerro Santana">
         </section>
-    
-        <section>
+
+        <section class="certificate">
             <h2>Web and Computer Programming Certificate</h2>
             <div class="filter-buttons">
                 <button id="all">All</button>
                 <button id="cse">CSE</button>
                 <button id="wdd">WDD</button>
             </div>
-            <div id="course-list">
+            <div class="courses">
+                <div class="course-card">CSE 110</div>
+                <div class="course-card">WDD 130</div>
+                <div class="course-card">CSE 111</div>
+                <div class="course-card">CSE 210</div>
+                <div class="course-card">WDD 131</div>
+                <div class="course-card">WDD 231</div>
             </div>
         </section>
     </main>
-    
+
     <footer>
-        <p>©2024 🌷Jeimy Espinoza🌷 Ecuador</p>
-        <p>Last Modification: <span id="lastModified"></span></p>
+        <p>&copy; <span id="currentyear"></span> Jeimy Espinoza | Ecuador 
+            <img src="images/ecuador-flag.png" alt="Ecuador Flag">
+        </p>
+        <p id="lastModified"></p>
     </footer>
-    
+
 </body>
 </html>
