@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    background-color: #002244;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+header img {
+    width: 80px;
+    border-radius: 20%;
+}
+
+header span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem;
+    display: block;
+    background-color: #004488;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #0066cc;
+}
+
+main {
+    padding: 1rem;
+}
+
+section {
+    background-color: white;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.course-work, .location {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.location img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.certificate {
+    text-align: center;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.filter-buttons button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #004488;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filter-buttons button:hover {
+    background-color: #0066cc;
+}
+
+.courses {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.course-card {
+    background-color: #8B4513;
+    color: white;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #002244;
+    color: white;
+    padding: 1rem;
+    margin-top: 1rem;
+}
