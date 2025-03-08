@@ -1,8 +1,12 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     background-color: #f4f4f4;
     color: #333;
     text-align: center;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
 }
 
 header {
