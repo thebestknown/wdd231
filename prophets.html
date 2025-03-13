@@ -9,17 +9,27 @@
     <meta name="author" content="Jeimy Espinoza">
     <link rel="stylesheet" href="styles/prophets.css">
     <script defer src="scripts/prophets.js"></script>
-
 </head>
 <body>
+
     <header>
         <h1>Latter-day Prophets</h1>
     </header>
-    
+
     <main>
+
+        <div class="filters">
+            <button onclick="filterUtah()">Born in Utah</button>
+            <button onclick="filterOutsideUSA()">Born Outside USA</button>
+            <button onclick="filterOlder95()">Lived 95+ Years</button>
+            <button onclick="filterChildren10()">10+ Children</button>
+            <button onclick="filterPresident15()">Served 15+ Years</button>
+            <button onclick="resetFilters()">Show All</button>
+        </div>
         <div id="cards"></div>
+
     </main>
-    
+
     <footer>
         Jeimy Espinoza | Latter-day Prophets
     </footer>
