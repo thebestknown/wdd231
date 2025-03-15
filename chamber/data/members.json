@@ -1,0 +1,59 @@
+[
+    {
+      "name": "Sweet Land Bakery & Coffee",
+      "address": "Av. June 5 y Bolívar, Quevedo, Ecuador",
+      "phone": "098-271-3692",
+      "website": "https://www.instagram.com/sweet_land_ec/",
+      "image": "sweetland.webp",
+      "membership": 3
+    },
+    {
+      "name": "Papa John's",
+      "address": "Av. June 5 y Bolívar, Quevedo, Ecuador (Frente al Parque Central)",
+      "phone": "099-562-2233",
+      "website": "https://www.papajohns.com.ec/",
+      "image": "papajohns.webp",
+      "membership": 2
+    },
+    {
+      "name": "KFC",
+      "address": "Av. Walter Andrade, Plaza Triángulo, Quevedo, Ecuador",
+      "phone": "1800-032-032",
+      "website": "https://www.kfc.com.ec/",
+      "image": "kfc.webp",
+      "membership": 2
+    },
+    {
+      "name": "Gloria Saltos",
+      "address": "Av. Bolívar y 7 de Octubre, Quevedo, Ecuador",
+      "phone": "052-750-410",
+      "website": "https://gloriasaltos.com/",
+      "image": "gloria-saltos.webp",
+      "membership": 3
+    },
+    {
+      "name": "Ferretería Wong",
+      "address": "Av. Bolívar 510 y 7 de Octubre, Quevedo, Ecuador",
+      "phone": "052-751-515",
+      "website": "https://www.facebook.com/casaferreteriafongsa/?locale=es_LA",
+      "image": "ferre-wong.webp",
+      "membership": 1
+    },
+    {
+      "name": "Farmacias Económicas Quevedo",
+      "address": "Calle Bolívar y 10 de Agosto, Quevedo, Ecuador",
+      "phone": "1800-ECONOMICAS",
+      "website": "https://www.farmaciaseconomicas.com.ec/",
+      "image": "eco-farmacias.webp",
+      "membership": 1
+    },
+    {
+      "name": "De Mujeres Beauty Market",
+      "address": "Av. Quito y Walter Andrade, Quevedo, Ecuador",
+      "phone": "098-765-1122",
+      "website": "https://www.dmujeres.ec/?srsltid=AfmBOorwmcig9FifZPVJ2W1pjyQdv3VespkDCo-Lk5LstzxZ0NJgJ9hv",
+      "image": "demujeres.webp",
+      "membership": 2
+    }
+  ]
+  
