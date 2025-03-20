@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quevedo Chamber of Commerce | Home</title>
+    <meta name="description" content="Welcome to the Quevedo Chamber of Commerce homepage." />
+    <meta name="author" content="Jeimy Espinoza" />
+    <link rel="icon" href="images/favicon1.ico" />
+    <meta property="og:title" content="Quevedo Chamber of Commerce Home" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://thebestknown.github.io/wdd231/chamber/images/favicon1.ico" />
+    <meta property="og:url" content="https://thebestknown.github.io/wdd231/chamber/index.html" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/chamber.css" />
+    <script defer src="scripts/chamber.js"></script>
+    <script defer src="scripts/weather.js"></script>
+    <script defer src="scripts/spotlight.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <button id="menu">Menu</button>
+            <ul class="navigation">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Quevedo Chamber of Commerce</h1>
+
+        <section class="hero">
+            <img src="images/hero.jpg" alt="Quevedo Chamber Hero Image" />
+            <a href="join.html" class="cta-button">Join the Chamber</a>
+        </section>
+
+        <section class="events">
+            <h2>Upcoming Events</h2>
+            <p>🎉 Business Networking: March 22</p>
+            <p>🧹 Community Cleanup: March 28</p>
+        </section>
+
+        <section class="weather">
+            <h2>Current Weather</h2>
+            <p>Temperature: <span id="current-temp"></span></p>
+            <p>Description: <span id="weather-desc"></span></p>
+            <div class="forecast">
+                <p>Tomorrow: <span id="day1"></span></p>
+                <p>Next Day: <span id="day2"></span></p>
+                <p>Following Day: <span id="day3"></span></p>
+            </div>
+        </section>
+
+        <section class="spotlights">
+            <h2>Member Spotlights</h2>
+            <div id="spotlight-container" class="grid"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Quevedo Chamber of Commerce</p>
+        <p>Developed by 🌷Jeimy Espinoza🌷 | WDD 231 | Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
