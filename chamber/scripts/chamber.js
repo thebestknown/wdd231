@@ -69,3 +69,8 @@ if (gridBtn && listBtn && membersContainer) {
 
   getMembers();
 }
+
+if (iconCode && iconsrc) {
+  weatherIcon.setAttribute('src', iconsrc);
+  weatherIcon.setAttribute('alt', description);
+}

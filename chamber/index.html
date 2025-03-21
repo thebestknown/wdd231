@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
   <title>Quevedo Chamber of Commerce | Home</title>
-  <meta name="description" content="Welcome to the Quevedo Chamber of Commerce homepage." />
-  <meta name="author" content="Jeimy Espinoza" />
-  <link rel="icon" href="images/favicon1.ico" />
+  <meta name="description" content="Welcome to the Quevedo Chamber of Commerce homepage." >
+  <meta name="author" content="Jeimy Espinoza" >
+  <link rel="icon" href="images/favicon1.ico" >
   <meta property="og:title" content="Quevedo Chamber of Commerce Directory">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://thebestknown.github.io/wdd231/chamber/images/favicon1.ico">
   <meta property="og:url" content="https://thebestknown.github.io/wdd231/chamber/directory.html">
   <link rel="stylesheet" href="styles/normalize.css" />
-  <link rel="stylesheet" href="styles/chamber.css" />
+  <link rel="stylesheet" href="styles/chamber.css">
   <script  src="scripts/chamber.js" defer></script>
   <script  src="scripts/weather.js" defer></script>
 </head>
@@ -25,7 +25,7 @@
       <h1>Quevedo Chamber of Commerce</h1>
     </div>
     <nav>
-      <button class="hamburger"></button>
+      <button class="hamburger" aria-label="Toggle navigation"></button>
       <ul class="navigation">
         <li><a href="index.html">Home</a></li>
         <li><a href="directory.html">Directory</a></li>
@@ -36,6 +36,7 @@
   </header>
 
   <section class="hero">
+    <h2>About Quevedo Chamber</h2>
     <img src="images/quevedo-city.webp" alt="Scalable, responsive hero image" width="400" height="300" loading="lazy"/>
     <a href="join.html" class="cta-button">Join now!</a>
   </section>
@@ -49,6 +50,7 @@
     </div>
 
     <section id="members" class="grid">
+      <h2>Our Members</h2>
     </section>
 
     <h2>Home</h2>
@@ -65,7 +67,7 @@
         <h3>Current Weather</h3>
         <p><strong><span id="current-temp"></span></strong></p>
         <figure>
-          <img id="weather-icon" src="" alt="" />
+          <img id="weather-icon" src="images/default-weather-icon.png" alt="Weather icon" />
           <figcaption id="weather-desc"></figcaption>
         </figure>
         <p><strong>Humidity:</strong> <span id="humidity"></span>%</p>
@@ -83,6 +85,7 @@
     </section>
 
     <section class="spotlights">
+      <h2>Spotlight Members</h2>
       <div class="spotlight-card" id="spotlight1"></div>
       <div class="spotlight-card" id="spotlight2"></div>
       <div class="spotlight-card" id="spotlight3"></div>
