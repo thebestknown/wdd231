@@ -1,65 +1,71 @@
 const yearSpan = document.getElementById("year");
 const lastModifiedSpan = document.getElementById("lastModified");
 
-yearSpan.textContent = new Date().getFullYear();
-lastModifiedSpan.textContent = document.lastModified;
+if (yearSpan) {
+  yearSpan.textContent = new Date().getFullYear();
+}
 
-const menuButton = document.getElementById("menu");
-const navUl = document.querySelector(".navigation");
+if (lastModifiedSpan) {
+  lastModifiedSpan.textContent = document.lastModified;
+}
 
-menuButton.addEventListener("click", () => {
-    navUl.classList.toggle("show");
-});
+const hamburgerButton = document.querySelector('.hamburger');
+const navigationMenu = document.querySelector('.navigation');
+
+if (hamburgerButton && navigationMenu) {
+  hamburgerButton.addEventListener('click', () => {
+    hamburgerButton.classList.toggle('open');
+    navigationMenu.classList.toggle('show');
+  });
+}
 
 const membersContainer = document.getElementById('members');
 const gridBtn = document.getElementById('gridBtn');
 const listBtn = document.getElementById('listBtn');
 
 async function getMembers() {
-    try {
-        const response = await fetch('data/members.json');
-        const members = await response.json();
-        displayMembers(members);
-    } catch (error) {
-        console.error("Error fetching members:", error);
-    }
+  if (!membersContainer) {
+    return;
+  }
+
+  try {
+    const response = await fetch('data/members.json');
+    const members = await response.json();
+    displayMembers(members);
+  } catch (error) {
+    console.error("Error fetching members:", error);
+  }
 }
 
 function displayMembers(members) {
-    membersContainer.innerHTML = ''; 
+  membersContainer.innerHTML = '';
 
-    members.forEach(member => {
-        const card = document.createElement('section');
-        card.classList.add('member-card');
+  members.forEach(member => {
+    const card = document.createElement('section');
+    card.classList.add('member-card');
 
-        card.innerHTML = `
-            <img src="images/${member.image}" alt="${member.name} logo" loading="lazy">
-            <h3>${member.name}</h3>
-            <p>${member.address}</p>
-            <p>${member.phone}</p>
-            <a href="${member.website}" target="_blank">Visitar Sitio Web</a>
-        `;
+    card.innerHTML = `
+      <img src="images/${member.image}" alt="${member.name} logo" loading="lazy">
+      <h3>${member.name}</h3>
+      <p>${member.address}</p>
+      <p>${member.phone}</p>
+      <a href="${member.website}" target="_blank">Visitar Sitio Web</a>
+    `;
 
-        membersContainer.appendChild(card);
-    });
+    membersContainer.appendChild(card);
+  });
 }
 
-gridBtn.addEventListener('click', () => {
+if (gridBtn && listBtn && membersContainer) {
+  gridBtn.addEventListener('click', () => {
     membersContainer.classList.add('grid');
     membersContainer.classList.remove('list');
-});
+  });
 
-listBtn.addEventListener('click', () => {
+  listBtn.addEventListener('click', () => {
     membersContainer.classList.add('list');
     membersContainer.classList.remove('grid');
-});
+  });
 
-getMembers();
-
-const hamburger = document.querySelector('.hamburger');
-const nav = document.querySelector('nav');
-
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
-});
+  getMembers();
+}

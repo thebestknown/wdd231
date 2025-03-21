@@ -17,6 +17,7 @@ body {
 header {
     background-color: var(--primary-color);
     color: white;
+    position: relative;
     padding: 1rem;
 }
 
@@ -49,10 +50,9 @@ nav ul li a {
 }
 
 nav ul.show {
-    display: block;
+    display: flex;
 }
 
-/* ===== DIRECTORY VIEW BUTTONS ===== */
 .view-buttons {
     display: flex;
     justify-content: center;
@@ -75,7 +75,6 @@ nav ul.show {
     color: #000;
 }
 
-/* ===== DIRECTORY GRID AND LIST ===== */
 #members {
     padding: 1rem;
     max-width: 1200px;
@@ -139,26 +138,6 @@ nav ul.show {
     color: var(--primary-color);
     text-decoration: underline;
     font-weight: bold;
-}
-
-.hamburger {
-    display: block;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.5rem;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    cursor: pointer;
-}
-
-.hamburger::before {
-    content: "☰"; 
-}
-
-.hamburger.open::before {
-    content: "❎"; 
 }
 
 .hero {
@@ -299,6 +278,37 @@ footer p {
     margin: 0.5rem 0;
 }
 
+.hamburger {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.hamburger::before {
+    content: "☰"; 
+}
+
+.hamburger.open::before {
+    content: "❎"; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
 @media screen and (max-width: 768px) {
 
     nav ul {
@@ -310,10 +320,12 @@ footer p {
         right: 0;
         width: 100%;
         text-align: center;
+        padding: 0;
+        margin: 0;
     }
 
     nav ul.show {
-        display: flex;
+        display: flex; 
     }
 
     .info-sections {
@@ -323,7 +335,7 @@ footer p {
     .spotlights {
         flex-direction: column;
     }
-
+    
     footer {
         flex-direction: column;
         align-items: center;
