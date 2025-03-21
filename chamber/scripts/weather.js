@@ -45,9 +45,9 @@ function capitalizeWords(str) {
 
 apiFetch();
 
-
-
-const spotlightContainer = document.getElementById('spotlight-container');
+const spotlight1 = document.getElementById('spotlight1');
+const spotlight2 = document.getElementById('spotlight2');
+const spotlight3 = document.getElementById('spotlight3');
 
 async function getSpotlightMembers() {
     try {
@@ -63,20 +63,18 @@ function displaySpotlights(members) {
     const spotlightMembers = members.filter(member => member.membership === 2 || member.membership === 3);
     const randomSpotlights = getRandomItems(spotlightMembers, 3);
 
-    randomSpotlights.forEach(member => {
-        const card = document.createElement('div');
-        card.classList.add('member-card');
-
-        card.innerHTML = `
-            <h3>${member.name}</h3>
-            <img src="images/${member.image}" alt="${member.name} logo" loading="lazy" />
-            <p>${member.address}</p>
-            <p>${member.phone}</p>
-            <a href="${member.website}" target="_blank">Visit Website</a>
-            <p class="membership-level">${member.membership === 3 ? 'Gold' : 'Silver'} Member</p>
-        `;
-
-        spotlightContainer.appendChild(card);
+    [spotlight1, spotlight2, spotlight3].forEach((spot, index) => {
+        if (randomSpotlights[index]) {
+            const member = randomSpotlights[index];
+            spot.innerHTML = `
+                <h3>${member.name}</h3>
+                <img src="images/${member.image}" alt="${member.name} logo" loading="lazy" />
+                <p>${member.address}</p>
+                <p>${member.phone}</p>
+                <a href="${member.website}" target="_blank">Visit Website</a>
+                <p class="membership-level">${member.membership === 3 ? 'Gold' : 'Silver'} Member</p>
+            `;
+        }
     });
 }
 

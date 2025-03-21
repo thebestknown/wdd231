@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #2a7f62;
+    --primary-color: #114131;
     --secondary-color: #f4f4f4;
     --accent-color: #ffc107;
     --text-color: #333;
@@ -20,8 +20,15 @@ header {
     padding: 1rem;
 }
 
-header h1 {
-    margin: 0;
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header .logo img {
+    width: 50px;
+    height: 50px;
 }
 
 nav {
@@ -45,6 +52,7 @@ nav ul.show {
     display: block;
 }
 
+/* ===== DIRECTORY VIEW BUTTONS ===== */
 .view-buttons {
     display: flex;
     justify-content: center;
@@ -67,6 +75,7 @@ nav ul.show {
     color: #000;
 }
 
+/* ===== DIRECTORY GRID AND LIST ===== */
 #members {
     padding: 1rem;
     max-width: 1200px;
@@ -132,40 +141,25 @@ nav ul.show {
     font-weight: bold;
 }
 
-footer {
-    background-color: var(--primary-color);
+.hamburger {
+    display: block;
+    background: none;
+    border: none;
     color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-    font-size: 0.8rem;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
 }
 
-.weather {
-    background-color: var(--background-color);
-    padding: 1rem;
-    margin: 1rem auto;
-    max-width: 600px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-  
-  .weather h2 {
-    margin-bottom: 0.5rem;
-  }
-  
-  .weather img {
-    width: 100px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
-  
-  .weather p, .weather figcaption {
-    font-size: 1.1rem;
-  }
-  
+.hamburger::before {
+    content: "☰"; 
+}
+
+.hamburger.open::before {
+    content: "❎"; 
+}
 
 .hero {
     position: relative;
@@ -175,18 +169,19 @@ footer {
 .hero img {
     width: 100%;
     height: auto;
-    display: block;
 }
 
 .cta-button {
-    display: inline-block;
-    margin-top: 1rem;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
     padding: 0.75rem 1.5rem;
     background-color: var(--accent-color);
     color: #000;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 .cta-button:hover {
@@ -194,49 +189,164 @@ footer {
     color: #fff;
 }
 
-.spotlights {
+.home-content {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 1rem;
-    background-color: var(--secondary-color);
 }
 
-.spotlights h2 {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-#spotlight-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.info-sections {
+    display: flex;
+    justify-content: space-between;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
-#spotlight-container .member-card {
-    text-align: center;
-    padding: 1rem;
+.events-section,
+.weather-current,
+.weather-forecast {
+    flex: 1 1 300px;
     background-color: var(--background-color);
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1rem;
 }
 
-#spotlight-container .member-card img {
-    width: 150px;
-    height: 150px;
+.events-section h3,
+.weather-current h3,
+.weather-forecast h3 {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+.weather-current figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather-current img {
+    width: 80px;
+}
+
+.weather-forecast p {
+    margin: 0.5rem 0;
+}
+
+.spotlights {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.spotlight-card {
+    flex: 1 1 300px;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 1rem;
+}
+
+.spotlight-card img {
+    width: 100px;
+    height: 100px;
     object-fit: contain;
+    margin-bottom: 1rem;
 }
 
 .membership-level {
-    margin-top: 0.5rem;
     font-weight: bold;
+    margin-top: 0.5rem;
 }
 
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    font-size: 0.8rem;
+}
+
+.footer-info,
+.footer-meta {
+    flex: 1 1 300px;
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1 1 300px;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.footer-social img {
+    width: 30px;
+    height: 30px;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
 
 @media screen and (max-width: 768px) {
+
     nav ul {
         display: none;
         flex-direction: column;
+        background-color: var(--primary-color);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
     }
 
     nav ul.show {
         display: flex;
+    }
+
+    .info-sections {
+        flex-direction: column;
+    }
+
+    .spotlights {
+        flex-direction: column;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem 1rem;  
+        text-align: center;     
+        max-width: 100%;        
+        box-sizing: border-box;
+    }
+
+    .footer-info,
+    .footer-meta {
+        flex: 1 1 100%;        
+        margin-bottom: 1rem;    
+    }
+
+    .footer-social {
+        flex: 1 1 100%;
+        justify-content: center;
+        margin: 1rem 0;
+    }
+
+    .footer-social img {
+        width: 40px;
+        height: 40px;
     }
 }
