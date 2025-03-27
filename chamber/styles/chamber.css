@@ -399,19 +399,6 @@ form {
     cursor: pointer;
     color: var(--primary-color);
   }
-  .card button {
-    background: none;
-    border: none;
-    color: purple;
-    text-decoration: underline;
-    cursor: pointer;
-    font-size: 1rem;
-    padding: 0;
-  }
-  
-  .card button:hover {
-    color: var(--primary-color);
-  }
   
   @keyframes fadeInCards {
     from {

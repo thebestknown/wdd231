@@ -78,32 +78,23 @@
     </form>
 
     <section class="membership-cards">
-        <div class="card" id="np-card">
-          <h3>NP Membership</h3>
-          <button type="button" onclick="document.getElementById('np-modal').showModal();">
-            More Info
-          </button>
-        </div>
-        <div class="card" id="bronze-card">
-          <h3>Bronze Membership</h3>
-          <button type="button" onclick="document.getElementById('bronze-modal').showModal();">
-            More Info
-          </button>
-        </div>
-        <div class="card" id="silver-card">
-          <h3>Silver Membership</h3>
-          <button type="button" onclick="document.getElementById('silver-modal').showModal();">
-            More Info
-          </button>
-        </div>
-        <div class="card" id="gold-card">
-          <h3>Gold Membership</h3>
-          <button type="button" onclick="document.getElementById('gold-modal').showModal();">
-            More Info
-          </button>
-        </div>
-      </section>
-      
+      <div class="card" id="np-card">
+        <h3>NP Membership</h3>
+        <a href="#" onclick="document.getElementById('np-modal').showModal();">More Info</a>
+      </div>
+      <div class="card" id="bronze-card">
+        <h3>Bronze Membership</h3>
+        <a href="#" onclick="document.getElementById('bronze-modal').showModal();">More Info</a>
+      </div>
+      <div class="card" id="silver-card">
+        <h3>Silver Membership</h3>
+        <a href="#" onclick="document.getElementById('silver-modal').showModal();">More Info</a>
+      </div>
+      <div class="card" id="gold-card">
+        <h3>Gold Membership</h3>
+        <a href="#" onclick="document.getElementById('gold-modal').showModal();">More Info</a>
+      </div>
+    </section>
 
     <dialog id="np-modal">
       <button onclick="this.closest('dialog').close();">❌</button>
