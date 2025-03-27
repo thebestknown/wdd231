@@ -74,6 +74,17 @@ nav ul.show {
     background-color: var(--accent-color);
     color: #000;
 }
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+  }  
 
 #members {
     padding: 1rem;
@@ -310,6 +321,7 @@ nav ul li a {
 }
 
 /* Join page */
+
 form {
     display: flex;
     flex-direction: column;

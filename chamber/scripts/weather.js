@@ -53,43 +53,27 @@ function capitalizeWords(str) {
 
 apiFetch();
 
-async function getSpotlightMembers() {
-  if (!spotlight1 || !spotlight2 || !spotlight3) {
-    console.warn('Spotlight elements not found on this page.');
-    return;
-  }
+const humidityEl = document.getElementById('humidity');
+const sunriseEl = document.getElementById('sunrise');
+const sunsetEl = document.getElementById('sunset');
 
+async function fetchCurrentWeather() {
   try {
-    const response = await fetch('data/members.json');
-    const members = await response.json();
-    displaySpotlights(members);
+    const response = await fetch('https://api.openweathermap.org/data/2.5/weather?lat=-1.0286&lon=-79.4635&units=metric&appid=957f0e935ecbf795d104357ab9550562');
+    if (!response.ok) throw new Error('Error fetching current weather');
+
+    const data = await response.json();
+
+    const humidity = data.main.humidity;
+    const sunrise = new Date(data.sys.sunrise * 1000).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    const sunset = new Date(data.sys.sunset * 1000).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+    if (humidityEl) humidityEl.textContent = humidity;
+    if (sunriseEl) sunriseEl.textContent = sunrise;
+    if (sunsetEl) sunsetEl.textContent = sunset;
   } catch (error) {
-    console.error("Error fetching spotlight members:", error);
+    console.error('Error fetching current weather:', error);
   }
 }
 
-function displaySpotlights(members) {
-  const spotlightMembers = members.filter(member => member.membership === 2 || member.membership === 3);
-  const randomSpotlights = getRandomItems(spotlightMembers, 3);
-
-  [spotlight1, spotlight2, spotlight3].forEach((spot, index) => {
-    const member = randomSpotlights[index];
-    if (spot && member) {
-      spot.innerHTML = `
-        <h3>${member.name}</h3>
-        <img src="images/${member.image}" alt="${member.name} logo" loading="lazy" />
-        <p>${member.address}</p>
-        <p>${member.phone}</p>
-        <a href="${member.website}" target="_blank">Visit Website</a>
-        <p class="membership-level">${member.membership === 3 ? 'Gold' : 'Silver'} Member</p>
-      `;
-    }
-  });
-}
-
-function getRandomItems(array, number) {
-  const shuffled = array.sort(() => 0.5 - Math.random());
-  return shuffled.slice(0, number);
-}
-
-getSpotlightMembers();
+fetchCurrentWeather();

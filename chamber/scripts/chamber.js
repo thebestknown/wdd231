@@ -24,9 +24,7 @@ const gridBtn = document.getElementById('gridBtn');
 const listBtn = document.getElementById('listBtn');
 
 async function getMembers() {
-  if (!membersContainer) {
-    return;
-  }
+  if (!membersContainer) return;
 
   try {
     const response = await fetch('data/members.json');
@@ -70,38 +68,49 @@ if (gridBtn && listBtn && membersContainer) {
   getMembers();
 }
 
-const weatherIcon = document.querySelector('#weather-icon');
-const weatherDesc = document.querySelector('#weather-desc');
+const spotlight1 = document.getElementById('spotlight1');
+const spotlight2 = document.getElementById('spotlight2');
+const spotlight3 = document.getElementById('spotlight3');
 
-const url = 'https://api.openweathermap.org/data/2.5/weather?q=Quevedo,EC&units=metric&appid=957f0e935ecbf795d104357ab9550562';
+async function getSpotlightMembers() {
+  if (!spotlight1 || !spotlight2 || !spotlight3) {
+    console.warn('Spotlight elements not found on this page.');
+    return;
+  }
 
-fetch(url)
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Weather data not available');
+  try {
+    const response = await fetch('data/members.json');
+    const members = await response.json();
+    displaySpotlights(members);
+  } catch (error) {
+    console.error("Error fetching spotlight members:", error);
+  }
+}
+
+function displaySpotlights(members) {
+  const spotlightMembers = members.filter(member => member.membership === 2 || member.membership === 3);
+  const randomSpotlights = getRandomItems(spotlightMembers, 3);
+
+  [spotlight1, spotlight2, spotlight3].forEach((spot, index) => {
+    const member = randomSpotlights[index];
+    if (spot && member) {
+      spot.innerHTML = `
+        <h3>${member.name}</h3>
+        <img src="images/${member.image}" alt="${member.name} logo" loading="lazy" />
+        <p>${member.address}</p>
+        <p>${member.phone}</p>
+        <a href="${member.website}" target="_blank">Visit Website</a>
+        <p class="membership-level">${member.membership === 3 ? 'Gold' : 'Silver'} Member</p>
+      `;
     }
-    return response.json();
-  })
-  .then(data => {
-    const iconCode = data.weather[0].icon;
-    const iconsrc = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
-    const description = data.weather[0].description;
-
-    if (weatherIcon && iconCode && iconsrc) {
-      weatherIcon.setAttribute('src', iconsrc);
-      weatherIcon.setAttribute('alt', description);
-    }
-
-    if (weatherDesc) {
-      weatherDesc.textContent = description.charAt(0).toUpperCase() + description.slice(1);
-    }
-  })
-  .catch(error => {
-    console.error('Error fetching weather:', error);
   });
+}
 
+function getRandomItems(array, number) {
+  const shuffled = array.sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, number);
+}
 
-if (weatherIcon && iconCode && iconsrc) {
-  weatherIcon.setAttribute('src', iconsrc);
-  weatherIcon.setAttribute('alt', description);
+if (document.getElementById('spotlight1') && document.getElementById('spotlight2') && document.getElementById('spotlight3')) {
+  getSpotlightMembers();
 }
