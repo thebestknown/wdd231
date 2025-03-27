@@ -70,7 +70,38 @@ if (gridBtn && listBtn && membersContainer) {
   getMembers();
 }
 
-if (iconCode && iconsrc) {
+const weatherIcon = document.querySelector('#weather-icon');
+const weatherDesc = document.querySelector('#weather-desc');
+
+const url = 'https://api.openweathermap.org/data/2.5/weather?q=Quevedo,EC&units=metric&appid=957f0e935ecbf795d104357ab9550562';
+
+fetch(url)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Weather data not available');
+    }
+    return response.json();
+  })
+  .then(data => {
+    const iconCode = data.weather[0].icon;
+    const iconsrc = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+    const description = data.weather[0].description;
+
+    if (weatherIcon && iconCode && iconsrc) {
+      weatherIcon.setAttribute('src', iconsrc);
+      weatherIcon.setAttribute('alt', description);
+    }
+
+    if (weatherDesc) {
+      weatherDesc.textContent = description.charAt(0).toUpperCase() + description.slice(1);
+    }
+  })
+  .catch(error => {
+    console.error('Error fetching weather:', error);
+  });
+
+
+if (weatherIcon && iconCode && iconsrc) {
   weatherIcon.setAttribute('src', iconsrc);
   weatherIcon.setAttribute('alt', description);
 }

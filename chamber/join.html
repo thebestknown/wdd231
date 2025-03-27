@@ -14,18 +14,23 @@
   <link rel="stylesheet" href="styles/normalize.css" />
   <link rel="stylesheet" href="styles/chamber.css">
   <script src="scripts/chamber.js" defer></script>
-  <script src="scripts/weather.js" defer></script>
-  <script defer src="scripts/timestamp.js"></script>
+
 </head>
 <body>
   <header>
-    <h1>Chamber of Commerce</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="join.html" class="active">Join</a></li>
-      </ul>
-    </nav>
+        <div class="logo">
+          <img src="images/quevedo-logo.webp" alt="Quevedo Chamber of Commerce Logo" width="600" height="400" loading="lazy"/>
+          <h1>Quevedo Chamber of Commerce</h1>
+        </div>
+        <nav>
+          <button class="hamburger" aria-label="Toggle navigation"></button>
+          <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="#">Discover</a></li>
+          </ul>
+        </nav>    
   </header>
 
   <main>
@@ -73,23 +78,32 @@
     </form>
 
     <section class="membership-cards">
-      <div class="card" id="np-card">
-        <h3>NP Membership</h3>
-        <a href="#" onclick="document.getElementById('np-modal').showModal();">More Info</a>
-      </div>
-      <div class="card" id="bronze-card">
-        <h3>Bronze Membership</h3>
-        <a href="#" onclick="document.getElementById('bronze-modal').showModal();">More Info</a>
-      </div>
-      <div class="card" id="silver-card">
-        <h3>Silver Membership</h3>
-        <a href="#" onclick="document.getElementById('silver-modal').showModal();">More Info</a>
-      </div>
-      <div class="card" id="gold-card">
-        <h3>Gold Membership</h3>
-        <a href="#" onclick="document.getElementById('gold-modal').showModal();">More Info</a>
-      </div>
-    </section>
+        <div class="card" id="np-card">
+          <h3>NP Membership</h3>
+          <button type="button" onclick="document.getElementById('np-modal').showModal();">
+            More Info
+          </button>
+        </div>
+        <div class="card" id="bronze-card">
+          <h3>Bronze Membership</h3>
+          <button type="button" onclick="document.getElementById('bronze-modal').showModal();">
+            More Info
+          </button>
+        </div>
+        <div class="card" id="silver-card">
+          <h3>Silver Membership</h3>
+          <button type="button" onclick="document.getElementById('silver-modal').showModal();">
+            More Info
+          </button>
+        </div>
+        <div class="card" id="gold-card">
+          <h3>Gold Membership</h3>
+          <button type="button" onclick="document.getElementById('gold-modal').showModal();">
+            More Info
+          </button>
+        </div>
+      </section>
+      
 
     <dialog id="np-modal">
       <button onclick="this.closest('dialog').close();">❌</button>
@@ -110,12 +124,19 @@
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> Chamber of Commerce</p>
+    <div class="footer-info">
+      <p><strong>Quevedo Chamber of Commerce</strong></p>
+      <p>Av. Bolívar y 7 de Octubre, Quevedo, Ecuador</p>
+      <p>Email: info@quevedocamara.org</p>
+      <p>Phone: +593 555-2300</p>
+    </div>
+
+    <div class="footer-meta">
+      <p>WDD231 Class Project | 🌷Jeimy Espinoza🌷</p>
+      <p>&copy; <span id="year"></span> Quevedo Chamber of Commerce</p>
+      <p>Last Modified: <span id="lastModified"></span></p>
+    </div>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-    document.getElementById("timestamp").value = new Date().toISOString();
-  </script>
 </body>
 </html>
