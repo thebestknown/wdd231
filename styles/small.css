@@ -113,6 +113,45 @@ section {
     padding-top: 1rem;
 }
 
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .course-card {
+    animation: fadeInUp 0.5s ease forwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .course-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  }
+  
+  .filter-buttons button {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .filter-buttons button:hover {
+    background-color: #0099cc;
+    transform: scale(1.05);
+  }
+  
+  dialog button#closeModal {
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  dialog button#closeModal:hover {
+    transform: rotate(90deg);
+    color: red;
+  }
+
 .course-card {
     width: 90%;
     text-align: center;

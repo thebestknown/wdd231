@@ -103,6 +103,8 @@
         width: 100%;
     }
 
+    .course-card {animation-duration: 0.8s;}
+
     footer {
         text-align: center;
         padding: 1.5rem;
