@@ -5,10 +5,6 @@ const day1 = document.querySelector('#day1');
 const day2 = document.querySelector('#day2');
 const day3 = document.querySelector('#day3');
 
-const spotlight1 = document.getElementById('spotlight1');
-const spotlight2 = document.getElementById('spotlight2');
-const spotlight3 = document.getElementById('spotlight3');
-
 const url = 'https://api.openweathermap.org/data/2.5/forecast?lat=-1.0286&lon=-79.4635&units=metric&appid=957f0e935ecbf795d104357ab9550562';
 
 async function apiFetch() {
@@ -35,7 +31,9 @@ function displayResults(data) {
   const currentTemperature = data.list[0].main.temp.toFixed(0);
   const description = capitalizeWords(data.list[0].weather[0].description);
   const iconCode = data.list[0].weather[0].icon;
-  const iconsrc = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+  const iconsrc = iconCode 
+    ? `https://openweathermap.org/img/wn/${iconCode}@2x.png` 
+    : `https://openweathermap.org/img/wn/01d@2x.png`; // ícono por defecto
 
   currentTemp.innerHTML = `${currentTemperature}&deg;C`;
   weatherIcon.setAttribute('src', iconsrc);
