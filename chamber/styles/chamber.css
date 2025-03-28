@@ -53,6 +53,20 @@ nav ul.show {
     display: flex;
 }
 
+.hero img,
+.weather-current img,
+.spotlight-card img,
+.member-card img {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  height: auto;
+}
+
+img {
+    width: 400px;
+    height: 300px;
+  }
+
 .view-buttons {
     display: flex;
     justify-content: center;

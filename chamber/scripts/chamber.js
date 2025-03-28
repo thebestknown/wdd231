@@ -65,7 +65,7 @@ if (gridBtn && listBtn && membersContainer) {
     membersContainer.classList.remove('grid');
   });
 
-  getMembers();
+  requestIdleCallback(() => getMembers());
 }
 
 const spotlight1 = document.getElementById('spotlight1');
@@ -112,5 +112,5 @@ function getRandomItems(array, number) {
 }
 
 if (document.getElementById('spotlight1') && document.getElementById('spotlight2') && document.getElementById('spotlight3')) {
-  getSpotlightMembers();
+  requestIdleCallback(() => getSpotlightMembers());
 }
