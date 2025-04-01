@@ -272,18 +272,27 @@ img {
 footer {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-wrap: nowrap;
     background-color: var(--primary-color);
     color: white;
     padding: 1.5rem;
     margin-top: 2rem;
     font-size: 0.8rem;
-}
+  }
+  
 
-.footer-info,
-.footer-meta {
-    flex: 1 1 300px;
-}
+  .footer-info {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .footer-meta {
+    flex: 1;
+    min-width: 200px;
+    text-align: right;
+  }
+  
 
 .footer-social {
     display: flex;
@@ -534,6 +543,12 @@ form {
   font-family: 'Roboto', sans-serif;
 }
 
+.discover-hero {
+    max-height: 250px;
+    width: 100%;
+    object-fit: cover;
+  }
+  
 @media screen and (max-width: 768px) {
 
     nav ul {
@@ -562,13 +577,23 @@ form {
     }
     
     footer {
-        flex-direction: column;
-        align-items: center;
-        padding: 1.5rem 1rem;  
-        text-align: center;     
-        max-width: 100%;        
-        box-sizing: border-box;
-    }
+        display: flex;
+        justify-content: center; 
+        align-items: flex-start;
+        gap: 4rem; 
+        background-color: var(--primary-color);
+        color: white;
+        padding: 1.5rem;
+        margin-top: 2rem;
+        font-size: 0.8rem;
+        flex-wrap: wrap;
+      }
+    
+      .footer-info,
+      .footer-meta {
+        flex: 0 1 300px; 
+        text-align: left;
+      }
 
     .discover-grid {
         grid-template-areas:
