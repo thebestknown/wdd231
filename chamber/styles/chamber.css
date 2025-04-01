@@ -437,6 +437,102 @@ form {
     }
   }
   
+/* Discover page grid */
+.discover-main {
+  padding: 2rem;
+  background-color: #fefefe;
+}
+
+.discover-main h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  color: #333;
+}
+
+.discover-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-areas:
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    "card6"
+    "card7"
+    "card8";
+}
+
+.card {
+  background-color: var(--background-color);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  color: #2c2c2c;
+  margin-bottom: 0.5rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.card figure {
+  margin: 0 0 1rem 0;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.card address {
+  font-style: normal;
+  color: #555;
+  margin-bottom: 0.75rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.card button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #45a049;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* Visitor message styling */
+.visitor-message {
+  font-size: 1rem;
+  padding: 1rem;
+  background-color: #e6f7ff;
+  border: 1px solid #b3e5fc;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+}
 
 @media screen and (max-width: 768px) {
 
@@ -474,6 +570,23 @@ form {
         box-sizing: border-box;
     }
 
+    .discover-grid {
+        grid-template-areas:
+          "card1 card2 card3 card4"
+          "card5 card6 card7 card8";
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    
+    .discover-grid {
+        grid-template-areas:
+          "card1 card2"
+          "card3 card4"
+          "card5 card6"
+          "card7 card8";
+        grid-template-columns: 1fr 1fr;
+      }    
+
     .footer-info,
     .footer-meta {
         flex: 1 1 100%;        
@@ -490,4 +603,4 @@ form {
         width: 40px;
         height: 40px;
     }
-}
+
