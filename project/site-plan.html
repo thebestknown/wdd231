@@ -67,5 +67,23 @@
       </ul>
     </section>
 
+    <section>
+      <h2>Wireframe</h2>
+      <p><strong>Mobile View:</strong></p>
+      <img src="images/mobile-wireframe.webp" alt="Mobile wireframe layout">
+      <p><strong>Desktop View:</strong></p>
+      <img src="images/desktop-wireframe.webp" alt="Desktop wireframe layout">
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Jeimy Espinoza | Ecuador <img src="images/ecuador-flag.png" alt="Ecuador Flag"></p>
+    <p>Last Updated: <span id="lastModified"></span></p>
+  </footer>
+
+  <script>
+    document.getElementById("currentyear").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
 </body>
 </html>
