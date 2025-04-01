@@ -1,0 +1,51 @@
+[
+    {
+      "title": "Parque Central de Quevedo",
+      "image": "images/central-park-quevedo.webp",
+      "address": "Av. Bolívar y 7 de Octubre, Quevedo",
+      "description": "An iconic green space where families gather to enjoy cultural events, strolls, and outdoor relaxation."
+    },
+    {
+      "title": "Puente Sur",
+      "image": "images/puente-sur.webp",
+      "address": "Río Quevedo, southern entrance of the city",
+      "description": "A modern structure connecting the southern part of the city, offering panoramic river views and local fishing areas."
+    },
+    {
+      "title": "Malecón Eloy Alfaro",
+      "image": "images/malecon-quevedo.webp",
+      "address": "Av. Eloy Alfaro, riverside of Quevedo River",
+      "description": "A beautiful tourist boardwalk with walking trails, urban art, and spaces for food and artisan fairs."
+    },
+    {
+      "title": "Technical State University of Quevedo",
+      "image": "images/uteq-quevedo.webp",
+      "address": "Road to Santo Domingo Km 1.5",
+      "description": "Main higher education institution in the region, offering programs in agricultural, business, and technological sciences."
+    },
+    {
+      "title": "Paseo Shopping Mall",
+      "image": "images/paseo-shopping.webp",
+      "address": "Av. Walter Andrade, Quevedo",
+      "description": "A modern shopping center with movie theaters, a food court, and international retail brands."
+    },
+    {
+      "title": "Municipal Market",
+      "image": "images/mercado-municipal.webp",
+      "address": "Downtown Quevedo, Bolívar Street",
+      "description": "A traditional market to find fresh local produce, clothing, and handmade crafts."
+    },
+    {
+      "title": "7 de Octubre Stadium",
+      "image": "images/estadio-quevedo.webp",
+      "address": "Octava Street and June Guzmán Avenue",
+      "description": "The city's main sports venue, hosting professional football matches and large events."
+    },
+    {
+      "title": "Family Park",
+      "image": "images/family-park.webp",
+      "address": "El Guayacán Sector, Quevedo",
+      "description": "A family-themed recreational park with green areas, playgrounds, and cultural stages for all ages."
+    }
+  ]
+  
