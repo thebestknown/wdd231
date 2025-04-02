@@ -33,10 +33,30 @@ fetch("data/discover.json")
         </figure>
         <address>${item.address}</address>
         <p>${item.description}</p>
-        <button>Learn More</button>
+        <button type="button">Learn More</button>
       `;
 
       container.appendChild(card);
     });
   })
   .catch(error => console.error("Error loading discover data:", error));
+
+const infoDialog = document.getElementById("infoDialog");
+const dialogTitle = document.getElementById("dialogTitle");
+const dialogAddress = document.getElementById("dialogAddress");
+const dialogDescription = document.getElementById("dialogDescription");
+const closeDialog = document.getElementById("closeDialog");
+
+closeDialog.addEventListener("click", () => infoDialog.close());
+
+document.addEventListener("click", (e) => {
+  if (e.target && e.target.textContent === "Learn More") {
+    const card = e.target.closest(".card");
+    if (card) {
+      dialogTitle.textContent = card.querySelector("h3").textContent;
+      dialogAddress.textContent = card.querySelector("address").textContent;
+      dialogDescription.textContent = card.querySelector("p").textContent;
+      infoDialog.showModal();
+    }
+  }
+});
