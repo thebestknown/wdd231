@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  a {
+    color: #00457c;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+    background-color: white; 
+    border-radius: 10px; 
+  }
+  
+  .logo img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+  }  
+  
+  nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .navigation {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .navigation li a {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+  }
+  
+  .navigation li a.active,
+  .navigation li a:hover {
+    background-color: #00457c;
+    color: #fff;
+  }
+  
+  main {
+    flex: 1;
+    padding: 2rem;
+  }
+  
+  .intro {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #00457c;
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  
+  .cta-button:hover {
+    background-color: #0062b9;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .gallery-grid .card {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .gallery-grid .card:hover {
+    transform: scale(1.02);
+  }
+  
+  .filters {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .filters label {
+    margin-right: 0.5rem;
+    font-weight: 600;
+  }
+  
+  .filters select {
+    padding: 0.4rem 1rem;
+    font-size: 1rem;
+  }
+  
+  footer {
+    background-color: #222;
+    color: #eee;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  footer a {
+    color: #ccc;
+  }
+  
+  .footer-info, .footer-meta {
+    margin-bottom: 1rem;
+  }
+  
+  .visually-hidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  
