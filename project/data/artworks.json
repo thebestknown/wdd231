@@ -1,0 +1,83 @@
+[
+    {
+      "id": 1,
+      "title": "Emerald Gaze",
+      "image": "images/",
+      "style": "realism",
+      "description": "A regal portrait with dramatic lighting, emerald jewelry, and a subtle side glance.",
+      "rating": 4.8
+    },
+    {
+      "id": 2,
+      "title": "Golden Kitten",
+      "image": "images/",
+      "style": "realism",
+      "description": "A warm and soft-rendered painting of a fluffy kitten against a golden-brown background.",
+      "rating": 4.7
+    },
+    {
+      "id": 3,
+      "title": "Monochrome Stare",
+      "image": "images/",
+      "style": "sketch",
+      "description": "A pencil-style portrait capturing a young man’s calm and focused expression.",
+      "rating": 4.5
+    },
+    {
+      "id": 4,
+      "title": "Spider Multiverse",
+      "image": "images/",
+      "style": "cartoon",
+      "description": "A vivid comic illustration with glitch effects and dynamic poses from the Spider-Verse.",
+      "rating": 4.9
+    },
+    {
+      "id": 5,
+      "title": "Brothers in Faith",
+      "image": "images/",
+      "style": "realism",
+      "description": "Two smiling missionaries under sunlight, emanating peace and camaraderie.",
+      "rating": 5.0
+    },
+    {
+      "id": 6,
+      "title": "Morning Companions",
+      "image": "images/",
+      "style": "realism",
+      "description": "Bright, hopeful portrait of two friends in white shirts, surrounded by soft light and nature.",
+      "rating": 4.7
+    },
+    {
+      "id": 7,
+      "title": "Scarlet Touch",
+      "image": "images/",
+      "style": "realism",
+      "description": "A surreal digital portrait featuring delicate hands framing an intense facial expression.",
+      "rating": 4.9
+    },
+    {
+      "id": 8,
+      "title": "Summer Diaries",
+      "image": "images/",
+      "style": "cartoon",
+      "description": "A vibrant summer composition with beach elements and expressive female figures.",
+      "rating": 4.6
+    },
+    {
+      "id": 9,
+      "title": "Shadowlight",
+      "image": "images/",
+      "style": "realism",
+      "description": "A stylized self-portrait with blond hair and moody lighting, invoking introspection.",
+      "rating": 4.8
+    },
+    {
+      "id": 10,
+      "title": "Quiet Profile",
+      "image": "images/",
+      "style": "realism",
+      "description": "A contemplative side portrait with textured brushstrokes and soft color transitions.",
+      "rating": 4.7
+    }
+  ]
+  
