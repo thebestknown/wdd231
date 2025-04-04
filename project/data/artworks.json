@@ -86,6 +86,38 @@
     "style": "realism",
     "description": "An expressive digital portrait combining two views of the same woman, evoking introspection and beauty.",
     "rating": 4.9
-    }
+    },
+    {
+        "id": 12,
+        "title": "Pencil Elegance",
+        "image": "images/art12.webp",
+        "style": "sketch",
+        "description": "A delicate pencil drawing of a young woman, blending softness and detail with expressive linework.",
+        "rating": 4.8
+      },
+      {
+        "id": 13,
+        "title": "Sunlit Focus",
+        "image": "images/art13.webp",
+        "style": "realism",
+        "description": "A dramatic close-up portrait with sun shadows casting emotion across a determined face.",
+        "rating": 4.9
+      },
+      {
+        "id": 14,
+        "title": "Loki’s Gaze",
+        "image": "images/art14.webp",
+        "style": "cartoon",
+        "description": "A stylized portrait of Loki with his iconic horned crown and mischievous smile, capturing fan art essence.",
+        "rating": 4.7
+      },
+      {
+        "id": 15,
+        "title": "Swan Harmony",
+        "image": "images/art15.webp",
+        "style": "realism",
+        "description": "Two swans elegantly mirrored on a rippling blue lake, painted with bold and expressive strokes.",
+        "rating": 4.6
+      }      
   ]
   

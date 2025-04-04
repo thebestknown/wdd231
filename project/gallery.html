@@ -13,13 +13,13 @@
   <meta property="og:url" content="https://thebestknown.github.io/wdd231/project/gallery.html">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/portfolio.css" >
-  <script src="scripts/portfolio.js" defer type="module"></script>
+  <script src="scripts/portfolio.js" defer></script>
 </head>
 
 <body>
   <header>
     <div class="logo">
-      <img src="images/logo-image.webp" alt="Logo" width="120" height="120" loading="lazy" />
+      <img src="images/logo-image.webp" alt="Logo" width="120" height="120" loading="lazy">
     </div>
     <nav>
       <button class="hamburger" aria-label="Toggle navigation"></button>
@@ -36,19 +36,31 @@
     <h1>Gallery</h1>
 
     <section class="filters">
-      <label for="styleFilter">Filter by style:</label>
-      <select id="styleFilter">
-        <option value="all">All</option>
-        <option value="cartoon">Cartoon</option>
-        <option value="realism">Realism</option>
-        <option value="sketch">Sketch</option>
-      </select>
+      <h2 class="visually-hidden">Filter Options</h2>
+        <label for="styleFilter">Filter by style:</label>
+        <select id="styleFilter">
+            <option value="all">All</option>
+            <option value="cartoon">Cartoon</option>
+            <option value="realism">Realism</option>
+            <option value="sketch">Sketch</option>
+        </select>
     </section>
 
     <section id="gallery" class="gallery-grid">
+      <h2 class="visually-hidden">Artwork Gallery</h2>
+
       <!-- Dynamic portrait cards heeere -->
     </section>
   </main>
+
+  <div id="artModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <img id="modal-image" src="images/art1.webp" alt="Artwork preview">
+      <h2 id="modal-title" class="visually-hidden">Artwork Title</h2>
+      <p id="modal-description"></p>
+    </div>
+  </div>
 
   <footer>
     <div class="footer-info">
