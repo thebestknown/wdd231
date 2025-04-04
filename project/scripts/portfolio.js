@@ -90,3 +90,12 @@ function renderStars(rating) {
     });
   }
   
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('.navigation');
+  
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navMenu.classList.toggle('open');
+  });  
+  
+  document.getElementById("lastModified").textContent = document.lastModified;
