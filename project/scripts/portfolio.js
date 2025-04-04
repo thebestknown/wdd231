@@ -91,11 +91,11 @@ function renderStars(rating) {
   }
   
   const hamburger = document.querySelector('.hamburger');
-  const navMenu = document.querySelector('.navigation');
+  const navigation = document.querySelector('.navigation');
   
   hamburger.addEventListener('click', () => {
+    navigation.classList.toggle('show');
     hamburger.classList.toggle('open');
-    navMenu.classList.toggle('open');
   });  
   
   document.getElementById("lastModified").textContent = document.lastModified;
