@@ -11,9 +11,10 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://thebestknown.github.io/wdd231/project/images/profile.webp">
   <meta property="og:url" content="https://thebestknown.github.io/wdd231/project/gallery.html">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@400&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="styles/portfolio.css" >
-  <script src="scripts/portfolio.js" defer></script>
+  <script type="module" src="scripts/portfolio.js"></script>
 </head>
 
 <body>
@@ -48,8 +49,6 @@
 
     <section id="gallery" class="gallery-grid">
       <h2 class="visually-hidden">Artwork Gallery</h2>
-
-      <!-- Dynamic portrait cards heeere -->
     </section>
   </main>
 
@@ -71,7 +70,7 @@
       <p>WDD231 Class Project</p>
       <p>&copy; <span id="year"></span> Jeimy Espinoza</p>
       <p>Last Modified: <span id="lastModified"></span></p>
-      <a href="#">Attributions</a>
+      <a href="attributions.html">Attributions</a>
     </div>
   </footer>
 </body>

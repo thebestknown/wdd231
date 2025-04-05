@@ -52,10 +52,12 @@ function displayGallery(artworks) {
   });
 
   addRatingEvents();
-  addModalEvents(); // ✅ Modal click events
+  addModalEvents(); 
 }
 
-loadArtworks();
+if (document.querySelector("#gallery")) {
+  loadArtworks();
+}
 
 function renderStars(rating) {
   let starsHTML = "";
